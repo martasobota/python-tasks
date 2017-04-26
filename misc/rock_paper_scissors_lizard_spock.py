@@ -15,7 +15,7 @@ import random
 
 choices = ['rock', 'paper', 'scissors', 'lizard', 'Spock']
 
-print("\n--- Welcome to Sheldon Cooper's presents: Rock 🗻 Paper 📄 Scissors ✂️ Lizard 🦎 Spock 🤦🏻‍♂️ ---\n")
+print("\n--- Welcome to Sheldon Cooper's presents: Rock 🗻  Paper 📄  Scissors ✂️  Lizard 🦎  Spock 🤦🏻‍♂️ ---\n")
 name = input("What's your name? ")
 
 
@@ -43,7 +43,7 @@ def play():
 
 	if user.lower() in choices_lower:
 		print("\nYou typed: {}, computer typed: {} \n".format(user, computer))
-	elif user.lower() not in choices_lower:
+	elif user.lower() not in choices_lower or type(user) is int: #added or statement
 		print("Wrong choice, type one of showed below: ")
 		user = input("Type: rock, paper, scissors, lizard or Spock? ")
 		user_lower = user.lower()
