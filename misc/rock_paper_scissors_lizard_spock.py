@@ -20,23 +20,35 @@ name = input("What's your name? ")
 
 
 def play():
+
+	#taking variable name inside the play function
 	global name
+
 	user = input("{}, type: Rock, Paper, Scissors, Lizard or Spock? \n".format(name))
 	computer = random.choice(choices)
 
-	while user.lower() == computer.lower():
-		print("Your and computer's choices are the same. You typed: {}, computer typed: {}".format(user, computer))
-		user = input("Type once more: Rock, Paper, Scissors, Lizard or Spock? ")
-		computer = random.choice(choices)
-	choices_lower = [choice.lower() for choice in choices]
-	if user.lower() in choices_lower:
-		print("\nYou typed: {}, computer typed: {} \n".format(user, computer))
-	else:
-		print("Wrong choice, type one of showed below: ")
-		user = input("Type: rock, paper, scissors, lizard or spock? ")
-
+	#lowering cases in each choice to compare them easily and use later in comparisions
 	user_lower = user.lower()
 	comp_lower = computer.lower()
+	choices_lower = [choice.lower() for choice in choices]
+
+	while user_lower == comp_lower:
+		print("Your and computer's choices are the same. You typed: {}, computer typed: {}".format(user, computer))
+		
+		#creating new choices for both user and computer
+		user = input("Type once more: Rock, Paper, Scissors, Lizard or Spock? ")
+		user_lower = user.lower()
+		computer = random.choice(choices)
+		comp_lower = computer.lower()
+
+	if user.lower() in choices_lower:
+		print("\nYou typed: {}, computer typed: {} \n".format(user, computer))
+	elif user.lower() not in choices_lower:
+		print("Wrong choice, type one of showed below: ")
+		user = input("Type: rock, paper, scissors, lizard or Spock? ")
+		user_lower = user.lower()
+		computer = random.choice(choices)
+		comp_lower = computer.lower()
 
 	if user_lower == 'scissors' and comp_lower == 'paper':
 		print("{}, you won🏆, scissors cuts paper!".format(name))
@@ -87,6 +99,8 @@ def play():
 		print("{}, you won🏆, rock crushes scissors!".format(name))
 	elif user_lower == 'scissors' and comp_lower == 'rock':
 		print("{}, you loose, computer's rock crushes your scissors!".format(name))
+
+	#ask for one more game	
 	more = input("\nWanna play more (y/n)? ")
 	if more == 'y' or more == 'yes':
 		play()
