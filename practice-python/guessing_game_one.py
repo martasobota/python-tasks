@@ -13,16 +13,30 @@ import random
 
 try:
 	rand = random.randint(1, 9)
-	guess = int(input("Guess the number between 1 and 9: "))
+	guess = 0
+	tries = 0
 
-	while guess != rand:		
+	while guess != rand and guess != 'exit':
+		guess = input("Guess the number between 1 and 9 or type 'exit' to quit the game: ")
+
+		if guess == 'exit':
+			print("Bye, bye!")
+			break
+
+		guess = int(guess)
+		tries += 1	
+			
 		if guess > rand:
 			print("{} is too high!".format(guess))
-			guess = int(input("Guess once more: "))
+			# guess = int(input("Guess once more: "))
 		elif guess < rand:
 			print("{} is too low!".format(guess))
-			guess = int(input("Guess once more: "))
-	else:
-		print("Whoa! You won!!!")
+			# guess = int(input("Guess once more: "))
+		else:
+			print("Whoa! You won in {} try!!!".format(tries))
+			tries = 0
+
+		
+
 except ValueError:
 	print("Type number between 1 and 9, not letters")
