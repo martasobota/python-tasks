@@ -12,8 +12,14 @@ guessed = False
 
 while not guessed:
     try:
-        question = int(input("Zgadnij liczbę: "))
+        question = int(input("Guess number from 1 to 100: "))
     except ValueError:
-        print("To nie jest liczba")
+        print("This is not a number!")
         continue
-    
+    if question < guess:
+        print("The number is too low!")
+    elif question > guess:
+        print("The number is too high!")
+    elif question == guess:
+        print("You won! 🏆")
+        break
