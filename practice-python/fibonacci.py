@@ -7,7 +7,6 @@
 
 
 
-# n = int(input("How many Fibonacci's numbers would you like to generate? "))
 def fibonacci():
 	n = int(input("How many Fibonacci's numbers would you like to generate? "))
 	fib = [0, 1]
