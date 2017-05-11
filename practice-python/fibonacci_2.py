@@ -5,14 +5,17 @@
 # where the next number in the sequence is the sum of the previous two numbers 
 # in the sequence. The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …)
 
+def fibonacci_2():
+	n = int(input("How many Fibonacci's numbers would you like to generate? "))-1
+	a = 0
+	b = 1
+	result = []
+	while (len(result)) <= n:
+		result.append(a)
+		c = a + b
+		a = b
+		b = c
+	print (len(result))
+	return result
 
-def fibonacci():
-	n = int(input("How many Fibonacci's numbers would you like to generate? "))
-	fib = [0, 1]
-	for i in range(2, n):
-		fib.append(fib[-1] + fib[-2])
-	print (len(fib))
-	return fib
-
-print (fibonacci())
-
+print (fibonacci_2())
