@@ -22,7 +22,8 @@ def exercise_2(n):
 # exercise_2(8)
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-days = ['Monday', 'Tuesday', 'Środe']
+
+days = ['Monday', 'Tuesday', 'Wed']
 
 for day in days:
 	print day
