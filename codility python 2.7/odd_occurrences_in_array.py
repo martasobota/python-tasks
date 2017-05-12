@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- 
 
 def solution(A):
-    for m in A:
-        if A.count(m) < 2:
-            return m
+	result = 0
+	for number in A:
+		result ^= number
+	return result
