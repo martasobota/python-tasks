@@ -1,5 +1,6 @@
 """
 Link to task description [PL]:
+[zadanie 2]
 https://github.com/daftcode/zajecia_python_mini_edycja3/blob/master/zajecia_3/praca_domowa/praca_domowa.txt
 """
 
