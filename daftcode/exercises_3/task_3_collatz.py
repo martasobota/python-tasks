@@ -1,3 +1,9 @@
+"""
+Link to task description [PL]:
+[zadnaie 3]
+https://github.com/daftcode/zajecia_python_mini_edycja3/blob/master/zajecia_3/praca_domowa/praca_domowa.txt
+"""
+
 def collatz_gen(x):
     yield x
     while x != 1:
