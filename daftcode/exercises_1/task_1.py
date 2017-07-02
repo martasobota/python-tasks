@@ -15,12 +15,9 @@ def even_list():
 ### solution 2 - list comprehension
 
 def even_list_comprehension():
-    a = []
-    [a.append([i]) for i in range(100) if i % 2 == 0]
-    return a
+    return [[i] for i in range(100) if i % 2 == 0]
 
-# print('List comprehesion: ')
-# print(even_list_comprehension())
+print(even_list_comprehension())
 
 ### solution 3
 
