@@ -9,5 +9,4 @@ def solution(A, B, K):
             result += 1
     return result
 
-
-print solution(A, B, K)
+# print solution(A, B, K)

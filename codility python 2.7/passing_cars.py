@@ -1,7 +1,5 @@
 def solution(A):
-
     length = len(A)
-
     east = 0
     passing = 0
     for i in range(length):
@@ -12,5 +10,4 @@ def solution(A):
 
             if passing > 1000000000:
                 return -1
-
     return passing

@@ -27,4 +27,3 @@ days = ['Monday', 'Tuesday', 'Wed']
 
 for day in days:
 	print day
-
