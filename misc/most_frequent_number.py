@@ -2,17 +2,16 @@
 
 def most_frequent(given_list):
     max_item = None
+    item_occurences = 0
     check = dict()
     for n in given_list:
         if n in check:
             check[n] += 1
         else:
             check[n] = 1
-    item_occurences = 0
-    for item, value in check.items():
-        if value > item_occurences:
-            item_occurences = value
-            max_item = item
+        if check[n] > item_occurences:
+            item_occurences = check[n]
+            max_item = n
     return max_item
 
 # NOTE: The following input values will be used for testing your solution.
