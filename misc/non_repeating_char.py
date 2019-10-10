@@ -1,4 +1,7 @@
+import time
+
 def non_repeating(given_string):
+    start = time.now()
     check = {}
     for item in given_string:
         if item not in check:
@@ -8,8 +11,11 @@ def non_repeating(given_string):
     for item in check:
         if check[item] == 1:
             return item
+    end = time.now()
+    print(end - start)
     return None
 
+non_repeating("abcab")
 
 def test():
     assert non_repeating("abcab") == 'c'
